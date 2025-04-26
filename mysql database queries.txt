@@ -1,0 +1,155 @@
+create database QATestingDatabase;
+use qatestingdatabase;
+CREATE TABLE TestCases (
+    TestCaseID INT AUTO_INCREMENT PRIMARY KEY,
+    TestCaseName VARCHAR(255) NOT NULL UNIQUE,
+    AssociatedMethod VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE TestData (
+    TestDataID INT AUTO_INCREMENT PRIMARY KEY,
+    TestCaseName VARCHAR(255) NOT NULL,
+    SearchWith VARCHAR(255),
+    SearchTitles VARCHAR(255),
+    FOREIGN KEY (TestCaseName) REFERENCES TestCases(TestCaseName)
+);
+
+
+# TestCases table
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase1', 'method1');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase2', 'method2');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase3', 'method3');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase4', 'method4');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase5', 'method5');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase6', 'method6');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase7', 'method7');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase8', 'method8');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase9', 'method9');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase10', 'method10');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase11', 'method11');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase12', 'method12');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase13', 'method13');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase14', 'method14');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase15', 'method15');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase16', 'method16');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase17', 'method17');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase18', 'method18');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase19', 'method19');
+
+INSERT INTO TestCases (TestCaseName, AssociatedMethod)
+VALUES ('TestCase20', 'method20');
+
+-- TestData table
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase1', 'Latest English Action Movies');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase2', 'Latest Telugu Movies');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase3', 'Latest Hindi Movies');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase4', 'youtube');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase5', 'facebook');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase6', 'weather');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase7', 'amazon');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase8', 'instagram');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase9', 'Near by restaurants');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase10', 'Latest political News in India');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase11', 'Latest political News in India');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase12', 'Latest English Action Movies');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase13', 'Latest Telugu Movies');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase14', 'Latest Hindi Movies');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase15', 'youtube');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase16', 'facebook');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase17', 'weather');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase18', 'amazon');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase19', 'instagram');
+
+INSERT INTO TestData (TestCaseName, SearchWith)
+VALUES ('TestCase20', 'Near by restaurants');
+
+    
+    select * from TestCases;
+    
+    select * from TestData;
+    
+    SET SQL_SAFE_UPDATES = 0;
+
+    DELETE FROM TestData where TestDataID>10;
+    
+    DELETE FROM TestCases where TestCaseID>10;
+
+DELETE FROM TestData;
+
+DROP TABLE TestCases;
+
+DROP TABLE TestData;

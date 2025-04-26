@@ -1,0 +1,15 @@
+hub: java -jar selenium-server-4.12.1.jar hub
+
+node in same machine: java -jar selenium-server-4.12.1.jar node --detect-drivers true
+
+node in same machine with max threads: java -jar selenium-server-4.12.1.jar node --detect-drivers true --max-sessions 2
+
+
+node in different machine with max threads: java -jar selenium-server-4.12.1.jar node --detect-drivers true --max-sessions 2 --publish-events tcp://192.168.1.10:4442 --subscribe-events tcp://192.168.1.10:4443
+
+here give ip address and ports according to hub.
+
+
+can see nodes ui at: http://192.168.1.10:4444/ui
+
+
